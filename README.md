@@ -14,7 +14,7 @@ list of certificates like this in PNG format:
 
 ![Certificate Example](https://github.com/viniciusmassuchetto/certificate-generator/raw/master/doc/certificate-example.png)
 
-This application was initially used for [http://wordcamp.org][WordCamps] in Brazil.
+This application was initially used for [WordCamps](http://wordcamp.org) in Brazil.
 
 
 Requirements
