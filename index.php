@@ -22,12 +22,12 @@ if (isset($_REQUEST['email']) && $_REQUEST['email']) {
         }
 
         if (!DEBUG && is_file(CACHE_PATH . '/' . $info['file'])) {
-            $images[] = BASE_URL . '/cache/' . $info['file'];
+            $images[] = CACHE_DIR . '/' . $info['file'];
             continue;
         }
 
         $info['name'] = strtoupper(remove_accents($info['name']));
-        $info['bg_file'] = BASE_PATH . '/img/bg-' . $info['type'] . '.png';
+        $info['bg_file'] = 'img/bg-' . $info['type'] . '.png';
         $images[] = generate_image($info);
 
     }

@@ -1,5 +1,7 @@
 *.swp
+*.swo
 
+README.html
 config.php
 cache
 img

@@ -120,7 +120,7 @@ function generate_image($args = false) {
     ";
     if (!$db->query($sql))
         return false;
-    return BASE_URL . '/cache/' . $img_file;
+    return CACHE_DIR . '/' . $img_file;
 
 }
 function remove_accents($string) {
