@@ -1,0 +1,6 @@
+*.swp
+
+config.php
+cache
+img
+sandbox

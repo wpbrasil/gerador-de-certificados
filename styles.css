@@ -1,0 +1,8 @@
+body { text-align:center; background-color:#01567B; color:#E4E4E4; padding:60px 0 0 0; margin:0; }
+h1,h2,.wrap { text-shadow:#0A0A0A 1px 1px 1px; }
+img { border:1px solid #E4E4E4; padding:3px; }
+a { color:#7AA8BB; }
+.wrap { width:900px; background:transparent none no-repeat top center; padding:120px 0 0 0; margin:0 auto; }
+.items { padding:10px 0 0 0; }
+.item { display:inline; margin:10px; }
+input { padding:10px 15px; font-size:22px; font-weight:bold; text-align:center; }
