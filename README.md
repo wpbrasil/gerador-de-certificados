@@ -12,7 +12,7 @@ Brazil, we would like to generate documents with:
 The user is requested to visit a page and to type an e-mail address to get a
 list of certificates like this in PNG format:
 
-![Certificate Example](https://github.com/viniciusmassuchetto/certificate-generator/raw/master/doc/certificate-example.png)
+![Certificate Example](https://github.com/vmassuchetto/certificate-generator/raw/master/doc/certificate-example.png)
 
 This application was initially used for [WordCamps](http://wordcamp.org) in Brazil.
 
