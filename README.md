@@ -30,7 +30,7 @@ Installing and Configuring
 Clone the repo to a web host directory.
 
     cd DIRECTORY
-    git clone https://github.com/viniciusmassuchetto/certificate-generator.git .
+    git clone https://github.com/vmassuchetto/certificate-generator.git .
 
 Create a database with the schema in the `dbschema.sql` file.
 
@@ -59,7 +59,7 @@ to have a name and description inserted. They need to be located at
 `img/bg-<certificate type>.png`. The location of the name and description can
 be set in `config.php` throught the `IMG_NAME_*` and `IMG_DATA_*` constants.
 
-![Certificate Template](https://github.com/viniciusmassuchetto/certificate-generator/raw/master/doc/certificate-template.png)
+![Certificate Template](https://github.com/vmassuchetto/certificate-generator/raw/master/doc/certificate-template.png)
 
 
 To fill the database you'll need a spreadsheet with the following format:
