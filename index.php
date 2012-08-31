@@ -53,7 +53,7 @@ if (isset($_REQUEST['email']) && $_REQUEST['email']) {
             <h2>Oi, <?php echo $first_name; ?>!</h2>
         <?php endif; ?>
 
-        <?php if (count($images) > 0) : ?>
+        <?php if (!empty($images) && is_array($images)) : ?>
 
             <p>
                 Obrigado por participar do WordCamp Curitiba 2012!
