@@ -4,7 +4,7 @@ function init() {
 
     if (DEBUG) {
         ini_set('display_errors', true);
-        error_reporting(~0);
+        error_reporting(0);
     }
 
     global $db;
@@ -103,11 +103,27 @@ function generate_image($args = false) {
         $top = constant('IMG_' . $param_u . '_TOP');
 
         $text = $args[$param];
-        $center = imagecalculatecenter($image_width, $image_height,
-            $text, $font, $fontsize, $angle);
+        $newtext = $text;
+        $i = 0;
 
-        imagettftext($img, $fontsize, $angle,
-            $center['x'], $top, $white, $font, $text);
+        while (true) {
+            $i++;
+            $center = imagecalculatecenter($image_width, $image_height,
+                $newtext, $font, $fontsize, $angle);
+            $pos = imagettfbbox($fontsize, $angle, $font, $newtext);
+            if ($pos[2] - $pos[1] < $image_width - 100)
+                break;
+            $newtext = insert_line_breaks($text, $i);
+        }
+
+        $lines = explode("\n", $newtext);
+        foreach ($lines as $l) {
+            $center = imagecalculatecenter($image_width, $image_height,
+                $l, $font, $fontsize, $angle);
+            imagettftext($img, $fontsize, $angle,
+                $center['x'], $top, $white, $font, $l);
+            $top += $fontsize + $fontsize * 0.7;
+        }
 
     }
 
@@ -123,6 +139,32 @@ function generate_image($args = false) {
     return CACHE_DIR . '/' . $img_file;
 
 }
+
+function array_insert (&$array, $position, $insert_array) {
+    $first_array = array_splice ($array, 0, $position);
+    $array = array_merge ($first_array, $insert_array, $array);
+}
+
+function insert_line_breaks($str, $lines) {
+
+    $i = 0;
+    $t = 0;
+    $n = strlen($str) / $lines;
+
+    $array = explode(' ', $str);
+    foreach ($array as $a) {
+        $i++;
+        $t += strlen($a);
+        if ($t > $n) {
+            array_insert($array, $i, array("\n"));
+            $t = 0;
+        }
+    }
+
+    return implode(' ', $array);
+
+}
+
 function remove_accents($string) {
     if ( !preg_match('/[\x80-\xff]/', $string) )
         return $string;
