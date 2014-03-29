@@ -4,7 +4,7 @@ function init() {
 
     if (DEBUG) {
         ini_set('display_errors', true);
-        error_reporting(0);
+        error_reporting(~0);
     }
 
     global $db;
