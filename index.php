@@ -56,7 +56,7 @@ if (isset($_REQUEST['email']) && $_REQUEST['email']) {
         <?php if (!empty($images) && is_array($images)) : ?>
 
             <p>
-                Obrigado por participar do WordCamp Curitiba 2012!
+                Obrigado por participar do <?php echo TITLE;?>!
                 <?php if (count($images) > 1) : ?>
                     Aqui estão seus certificados.
                 <?php else : ?>
@@ -66,7 +66,7 @@ if (isset($_REQUEST['email']) && $_REQUEST['email']) {
 
             <p>
                 Qualquer problema, basta entrar em
-                 <a href="http://2012.curitiba.wordcamp.org/">contato</a>.
+                 <a href="<?php echo URL;?>">contato</a>.
             </p>
 
             <div class="items">
@@ -88,7 +88,7 @@ if (isset($_REQUEST['email']) && $_REQUEST['email']) {
                 <p>
                     Não foi possível encontrar o seu e-mail. Caso você
                     continue tendo este problema, por favor entre em
-                    <a href="http://2012.curitiba.wordcamp.org/">contato</a>
+                    <a href="<?php echo URL;?>">contato</a>
                     conosco informando o seu nome completo, e-mail, e as
                     atividades das quais você participou.
                 </p>

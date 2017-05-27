@@ -85,7 +85,7 @@ function generate_image($args = false) {
     $angle = 0;
 
     $img = imagecreatefrompng($args['bg_file']);
-    $white = imagecolorallocate($img, 255, 255, 255);
+    $white = imagecolorallocate($img, FONT_COLOR_R, FONT_COLOR_G, FONT_COLOR_B);
 
     $image_width = imagesx($img);
     $image_height = imagesy($img);
