@@ -6,6 +6,8 @@ define('DEBUG', false);
 /* The title for the generated web pages.
  * You probably want to put the title of your event here. */
 define('TITLE', 'Your Page Title');
+/* The url of the WordCamp. */
+define('URL', 'Your WordCamp Url');
 
 /* The logo of the event.
  * It's 120px height if you don't want to adjust the webpage's CSS. */
@@ -41,6 +43,11 @@ define('IMG_NAME_SIZE', 30);
 define('IMG_DATA_FONT', BASE_PATH . '/font/arialbd.ttf');
 define('IMG_DATA_TOP', 468);
 define('IMG_DATA_SIZE', 26);
+
+/* Font color for the texts that will be placed in the certificate. */
+define('FONT_COLOR_R', 255);
+define('FONT_COLOR_G', 255);
+define('FONT_COLOR_B', 255);
 
 global $db;
 
